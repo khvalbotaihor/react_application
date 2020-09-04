@@ -6,7 +6,7 @@ function Accordion(props:any) {
     console.log("Accordion rendered")
     return(
         <div>
-            <AccordionTitle title={props.title}/>
+            <AccordionTitle title={props.titleValue}/>
             <AccordionBody />
         </div>
     )

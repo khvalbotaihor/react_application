@@ -12,13 +12,15 @@ function App() {
     return (
         <div className="App">
             <div>
-                <PageTitle title={"This is App component"}/>
+{/*                <PageTitle title={"This is App component"}/>
                 <PageTitle title={"My friends"}/>
                 Article 1
-                <Rating value={3}/>
-                <Accordion title={"Menu"}/>
-                <Accordion title={"Users"}/>
+                <Rating value={3}/>*/}
+{/*                <Accordion titleValue={"Menu"}/>
+                <Accordion titleValue={"Users"}/>*/}
+{/*
                 Article 2
+*/}
                 <Rating value={0}/>
                 <Rating value={1}/>
                 <Rating value={2}/>
