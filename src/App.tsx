@@ -4,6 +4,7 @@ import './App.css';
 
 // function declaration
 function App() {
+    console.log("App rendering")
     // вот здесь функция может делать штото полезное
     // в конце функция обязана вернуть какойто результат, возвращают JSX
     return (
@@ -12,12 +13,14 @@ function App() {
                 <AppTitle />
                 <Rating />
                 <Accordion />
+                <Rating />
             </div>
         </div>
     );
 }
 
 function AppTitle() {
+    console.log("AppTitle rendering")
     return(
         <>This is App component</>
     )
@@ -26,6 +29,7 @@ function AppTitle() {
 export default App;
 
 function Rating() {
+    console.log("Rating rendering")
     return (
         <div>
             <Star />
@@ -33,12 +37,12 @@ function Rating() {
             <Star />
             <Star />
             <Star />
-
         </div>
     )
 }
 
 function Accordion() {
+    console.log("Accordion rendered")
     return(
         <div>
             <h3>Menu</h3>
@@ -53,6 +57,7 @@ function Accordion() {
 }
 
 function Star() {
+    console.log("Start rendering")
     return(
         <div>star</div>
     )
