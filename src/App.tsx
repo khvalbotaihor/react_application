@@ -21,7 +21,7 @@ function App() {
 {/*
                 Article 2
 */}
-                <Rating value={0}/>
+                <Rating value={1}/>
                 <Rating value={1}/>
                 <Rating value={2}/>
                 <Rating value={3}/>
