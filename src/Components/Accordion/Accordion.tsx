@@ -1,10 +1,12 @@
 import React from "react";
 
+
+
 function Accordion(props:any) {
     console.log("Accordion rendered")
     return(
         <div>
-            <AccordionTitle title={props.value}/>
+            <AccordionTitle title={props.title}/>
             <AccordionBody />
         </div>
     )

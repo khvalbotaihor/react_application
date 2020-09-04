@@ -16,8 +16,8 @@ function App() {
                 <PageTitle title={"My friends"}/>
                 Article 1
                 <Rating value={3}/>
-                <Accordion value={"Menu"}/>
-                <Accordion value={"Users"}/>
+                <Accordion title={"Menu"}/>
+                <Accordion title={"Users"}/>
                 Article 2
                 <Rating value={0}/>
                 <Rating value={1}/>
