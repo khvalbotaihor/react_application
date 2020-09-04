@@ -1,26 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+
+// function declaration
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // вот здесь функция может делать штото полезное
+    // в конце функция обязана вернуть какойто результат, возвращают JSX
+    return (
+        <div className="App">
+            <div>
+                This is App component
+            </div>
+        </div>
+    );
 }
 
 export default App;
+
+function Rating() {
+    return (
+        <div>
+            <div>start</div>
+            <div>start</div>
+            <div>start</div>
+            <div>start</div>
+            <div>start</div>
+        </div>
+    )
+}
+
+
+/*
+// function expression
+const App2 = function () {
+
+}
+// стрелочная функция, для обработчика собитий
+const App3 = ()=>{
+
+}*/
