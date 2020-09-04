@@ -9,12 +9,18 @@ function App() {
     return (
         <div className="App">
             <div>
-                This is App component
+                <AppTitle />
                 <Rating />
                 <Accordion />
             </div>
         </div>
     );
+}
+
+function AppTitle() {
+    return(
+        <>This is App component</>
+    )
 }
 
 export default App;
