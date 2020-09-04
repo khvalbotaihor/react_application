@@ -10,6 +10,8 @@ function App() {
         <div className="App">
             <div>
                 This is App component
+                <Rating />
+                <Accordion />
             </div>
         </div>
     );
