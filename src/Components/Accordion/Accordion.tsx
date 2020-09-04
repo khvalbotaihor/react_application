@@ -7,7 +7,6 @@ function Accordion() {
             <AccordionTitle />
             <AccordionBody />
         </div>
-
     )
 }
 
