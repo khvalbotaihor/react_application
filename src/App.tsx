@@ -22,11 +22,12 @@ export default App;
 function Rating() {
     return (
         <div>
-            <div>start</div>
-            <div>start</div>
-            <div>start</div>
-            <div>start</div>
-            <div>start</div>
+            <Star />
+            <Star />
+            <Star />
+            <Star />
+            <Star />
+
         </div>
     )
 }
@@ -45,6 +46,11 @@ function Accordion() {
     )
 }
 
+function Star() {
+    return(
+        <div>star</div>
+    )
+}
 /*
 // function expression
 const App2 = function () {
