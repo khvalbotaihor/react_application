@@ -47,11 +47,6 @@ function Accordion() {
         <div>
             <AccordionTitle />
             <AccordionBody />
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-            </ul>
         </div>
 
     )
@@ -63,6 +58,15 @@ function AccordionTitle() {
     )
 }
 
+function AccordionBody() {
+    return(
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    )
+}
 
 function Star() {
     console.log("Start rendering")
