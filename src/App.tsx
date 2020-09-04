@@ -12,19 +12,26 @@ function App() {
     return (
         <div className="App">
             <div>
-                <AppTitle />
-                <Rating />
+                <PageTitle />
+                Article 1
+                <Rating value={3}/>
                 <Accordion />
-                <Rating />
+                Article 2
+                <Rating value={0}/>
+                <Rating value={1}/>
+                <Rating value={2}/>
+                <Rating value={3}/>
+                <Rating value={4}/>
+                <Rating value={5}/>
             </div>
         </div>
     );
 }
 
-function AppTitle() {
+function PageTitle() {
     console.log("AppTitle rendering")
     return(
-        <>This is App component</>
+        <h1>This is App component</h1>
     )
 }
 
