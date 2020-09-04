@@ -1,8 +1,10 @@
 import React from "react";
 
+type AccordionPropsType = {
+    titleValue:string
+}
 
-
-function Accordion(props:any) {
+function Accordion(props:AccordionPropsType) {
     console.log("Accordion rendered")
     return(
         <div>
