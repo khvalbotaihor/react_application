@@ -26,6 +26,9 @@ function App() {
 
                 <hr />
                 <OnOff/>
+                <OnOff/>
+                <OnOff/>
+                <OnOff/>
                 <hr />
             </div>
         </div>
