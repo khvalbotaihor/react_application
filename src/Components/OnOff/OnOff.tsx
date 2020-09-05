@@ -11,7 +11,7 @@ function OnOff(props:OnOffPropsType) {
         border: "1px solid black",
         display: "inline-block",
         padding:"2px",
-        backgroundColor:props.on===true ? "green" : "",
+        backgroundColor:props.on ? "green" : "white",
 
 
     }
@@ -22,7 +22,7 @@ function OnOff(props:OnOffPropsType) {
         display: "inline-block",
         marginLeft: "2px",
         padding:"2px",
-        backgroundColor:props.on===false? "red" : "",
+        backgroundColor:props.on ? "white" : "red",
 
     }
     const indicatorStyle = {
@@ -32,7 +32,7 @@ function OnOff(props:OnOffPropsType) {
         border: "1px solid black",
         display: "inline-block",
         marginLeft: "5px",
-        backgroundColor:props.on===true ? "green" : "red",
+        backgroundColor:props.on ? "green" : "red",
 
     }
 
