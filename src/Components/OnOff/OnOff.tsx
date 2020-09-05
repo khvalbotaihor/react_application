@@ -6,39 +6,41 @@ type OnOffPropsType = {
 
 function OnOff(props:OnOffPropsType) {
     const onStyle = {
-        width: "40px",
-        height: "30px",
+        width: "30px",
+        height: "20px",
         border: "1px solid black",
-        backgroundColor:"green",
         display: "inline-block",
-        marginLeft:"2px"
+        padding:"2px",
+        backgroundColor:props.on===true ? "green" : "",
+
 
     }
     const offStyle = {
-        width: "40px",
-        height: "30px",
-        border: "1px solid black",
-        backgroundColor:"red",
-        display: "inline-block",
-        marginLeft:"2px",
-        marginRight:"2px",
-    }
-    const cicleStyle = {
-        width: "20px",
+        width: "30px",
         height: "20px",
-        borderRadius: "10px",
         border: "1px solid black",
-        backgroundColor:"green",
         display: "inline-block",
+        marginLeft: "2px",
+        padding:"2px",
+        backgroundColor:props.on===false? "red" : "",
+
     }
+    const indicatorStyle = {
+        width: "10px",
+        height: "10px",
+        borderRadius: "5px",
+        border: "1px solid black",
+        display: "inline-block",
+        marginLeft: "5px",
+        backgroundColor:props.on===true ? "green" : "red",
 
-
+    }
 
 return (
     <div>
-        <div style={onStyle}></div>
-        <div style={offStyle}></div>
-        <div style={cicleStyle}></div>
+        <div style={onStyle}>On</div>
+        <div style={offStyle}>Off</div>
+        <div style={indicatorStyle}></div>
     </div>
 )
 }
