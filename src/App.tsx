@@ -30,7 +30,7 @@ function App() {
                 <OnOff/>
 
                 <hr />
-                <UncontrolledAccordion titleValue={"Menu"} />
+                <UncontrolledAccordion titleValue={"UnMenu"} />
                 <Accordion titleValue={"Menu"} collapsed={false} />
 {/*
                 <UncontrolledAccordion titleValue={"Users"} />
