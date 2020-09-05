@@ -15,12 +15,12 @@ function App() {
         <div className="App">
             <div>
 
-                {/*                 <Rating value={0} />
-                <Rating value={1} />
-                <Rating value={2} />
-                <Rating value={3} />
-                <Rating value={4} />
-                <Rating value={5} />*/}
+                {/*                 <UncontrolledRating value={0} />
+                <UncontrolledRating value={1} />
+                <UncontrolledRating value={2} />
+                <UncontrolledRating value={3} />
+                <UncontrolledRating value={4} />
+                <UncontrolledRating value={5} />*/}
 
                 <hr />
                 <OnOff/>
