@@ -1,17 +1,20 @@
 import React from "react";
 
 type OnOffPropsType = {
-    on: boolean
+    //on: boolean
 }
 
 function OnOff(props:OnOffPropsType) {
+
+    const on=false;
+
     const onStyle = {
         width: "30px",
         height: "20px",
         border: "1px solid black",
         display: "inline-block",
         padding:"2px",
-        backgroundColor:props.on ? "green" : "white",
+        backgroundColor:on ? "green" : "white",
 
 
     }
@@ -22,7 +25,7 @@ function OnOff(props:OnOffPropsType) {
         display: "inline-block",
         marginLeft: "2px",
         padding:"2px",
-        backgroundColor:props.on ? "white" : "red",
+        backgroundColor:on ? "white" : "red",
 
     }
     const indicatorStyle = {
@@ -32,7 +35,7 @@ function OnOff(props:OnOffPropsType) {
         border: "1px solid black",
         display: "inline-block",
         marginLeft: "5px",
-        backgroundColor:props.on ? "green" : "red",
+        backgroundColor:on ? "green" : "red",
 
     }
 

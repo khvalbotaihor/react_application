@@ -25,8 +25,7 @@ function App() {
                 <Rating value={5} />*/}
 
                 <hr />
-                <OnOff on={true}/>
-                <OnOff on={false}/>
+                <OnOff/>
                 <hr />
             </div>
         </div>
