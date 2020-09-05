@@ -9,6 +9,9 @@ import {UncontrolledRating} from "./Components/UncontrolledRating/UncontrolledRa
 
 // function declaration
 function App() {
+
+
+
     console.log("App rendering")
     // вот здесь функция может делать штото полезное
     // в конце функция обязана вернуть какойто результат, возвращают JSX
@@ -28,13 +31,15 @@ function App() {
 
                 <hr />
                 <UncontrolledAccordion titleValue={"Menu"} />
+                <Accordion titleValue={"Menu"} collapsed={false} />
 {/*
                 <UncontrolledAccordion titleValue={"Users"} />
 */}
 
 
-                <UncontrolledRating value={2} />
-
+                <UncontrolledRating />
+                <Rating value={3}/>
+                
 
 
             </div>
