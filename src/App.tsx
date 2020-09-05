@@ -25,14 +25,16 @@ function App() {
 
                 <hr />
                 <OnOff/>
-                <OnOff/>
-                <OnOff/>
-                <OnOff/>
+
                 <hr />
                 <UncontrolledAccordion titleValue={"Menu"} />
+{/*
                 <UncontrolledAccordion titleValue={"Users"} />
+*/}
+
 
                 <UncontrolledRating value={2} />
+
 
 
             </div>

@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import {spawn} from "child_process";
 
 type RatingPropsType = {
     value:0|1|2|3|4|5
