@@ -3,26 +3,24 @@ import './App.css';
 import Accordion from "./Components/Accordion/Accordion";
 import {Rating} from "./Components/Rating/Rating";
 import OnOff from "./Components/OnOff/OnOff";
+import {UncontrolledRating} from "./Components/UncontrolledRating/UncontrolledRating";
+import UncontrolledAccordion from "./Components/UncontrolledAccordion/UncontrolledAccordion";
 
 
 // function declaration
 function App() {
     console.log("App rendering")
-    debugger;
     // вот здесь функция может делать штото полезное
     // в конце функция обязана вернуть какойто результат, возвращают JSX
     return (
         <div>
-{/*
-           <Accordion titleValue={"Menu"} collapsed={true} />
 
-            <Accordion titleValue={"Users"} collapsed={false}/>
-            <Rating value={2} />*/}
 
             <OnOff />
             <OnOff />
-
-
+            <UncontrolledRating />
+            <UncontrolledAccordion titleValue={"Menu"}/>
+            <UncontrolledAccordion titleValue={"Users"}/>
         </div>
     );
 }
