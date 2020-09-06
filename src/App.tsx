@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Accordion from "./Components/Accordion/Accordion";
+import {Rating} from "./Components/Rating/Rating";
 
 
 // function declaration
@@ -15,7 +16,7 @@ function App() {
            <Accordion titleValue={"Menu"} collapsed={true} />
 
             <Accordion titleValue={"Users"} collapsed={false}/>
-
+            <Rating value={2} />
 
 
         </div>
