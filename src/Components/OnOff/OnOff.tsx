@@ -1,10 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
+import {setFlagsFromString} from "v8";
 
 type OnOffPropsType = {
-    on: boolean
+    //on: boolean
 }
 
 function OnOff(props:OnOffPropsType) {
+
+let[on, SetOnOff] = useState<boolean>(false);
 
     const OnButtonStyle ={
         width: "30px",
@@ -12,7 +15,7 @@ function OnOff(props:OnOffPropsType) {
         border: "1px solid black",
         display:"inline-block",
         marginRight: "3px",
-        backgroundColor:props.on ? "green" : "white",
+        backgroundColor:on ? "green" : "white",
         padding: "2px"
 
 
@@ -23,7 +26,7 @@ function OnOff(props:OnOffPropsType) {
         border: "1px solid black",
         display:"inline-block",
         marginRight: "3px",
-        backgroundColor:props.on? "white": "red",
+        backgroundColor:on ? "white": "red",
         padding: "2px"
 
 
@@ -34,16 +37,16 @@ function OnOff(props:OnOffPropsType) {
         borderRadius: "5px",
         border: "1px solid black",
         display:"inline-block",
-        backgroundColor:props.on ? "green" : "red",
+        backgroundColor:on ? "green" : "red",
 
 
     }
 
     return(
     <div>
-        <div style={OnButtonStyle}>On</div>
-        <div style={OffButtonStyle}>Off</div>
-        <div style={IndicatorStyle}></div>
+        <div style={OnButtonStyle} onClick={()=>{SetOnOff(false)}}>On</div>
+        <div style={OffButtonStyle} onClick={()=>{SetOnOff(true)}}>Off</div>
+        <div style={IndicatorStyle} ></div>
     </div>
 )
 }
