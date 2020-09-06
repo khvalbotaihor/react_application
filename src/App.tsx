@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Accordion from "./Components/Accordion/Accordion";
 import {Rating} from "./Components/Rating/Rating";
+import OnOff from "./Components/OnOff/OnOff";
 
 
 // function declaration
@@ -12,11 +13,14 @@ function App() {
     // в конце функция обязана вернуть какойто результат, возвращают JSX
     return (
         <div>
-
+{/*
            <Accordion titleValue={"Menu"} collapsed={true} />
 
             <Accordion titleValue={"Users"} collapsed={false}/>
-            <Rating value={2} />
+            <Rating value={2} />*/}
+
+            <OnOff on={true}/>
+            <OnOff on={false}/>
 
 
         </div>
