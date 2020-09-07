@@ -29,7 +29,7 @@ let[on, SetOnOff] = useState<boolean>(false);
             <Accordion
                 titleValue={"Menushka"}
                 collapsed={collapsed}
-                onChange = {()=> {setCollapsed(!collapsed)}}
+                onChange={setCollapsed}
             />
         </div>
     );
