@@ -1,20 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import OnOff from "./Components/OnOff/OnOff";
 import UncontrolledAccordion from "./Components/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./Components/UncontrolledRating/UncontrolledRating";
 import Accordion from "./Components/Accordion/Accordion";
-import {Rating} from "./Components/Rating/Rating";
+import {Rating, RatingValueType} from "./Components/Rating/Rating";
 
 
 // function declaration
 function App() {
     console.log("App rendering")
 
+let[ratingValue, setRatingValue] = useState<RatingValueType>(3);
 
-
-    // вот здесь функция может делать штото полезное
-    // в конце функция обязана вернуть какойто результат, возвращают JSX
     return (
         <div className={"App"}>
 
@@ -23,7 +21,7 @@ function App() {
             <UncontrolledAccordion titleValue={"Menu"}/>
             <UncontrolledRating />
             //controlled components
-            <Rating value={3} />
+            <Rating value={ratingValue} onClick={setRatingValue}/>
             <Accordion titleValue={"Menushka"} collapsed={false} />
         </div>
     );
