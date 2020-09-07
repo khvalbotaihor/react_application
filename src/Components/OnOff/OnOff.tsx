@@ -2,19 +2,19 @@ import React, {useState} from "react";
 
 type OnOffPropsType = {
     on: boolean
-    onChange: (value:boolean) => void
+    onChange: (value: boolean) => void
 }
 
 
-function OnOff(props:OnOffPropsType) {
+function OnOff(props: OnOffPropsType) {
 
-    const OnButtonStyle ={
+    const OnButtonStyle = {
         width: "30px",
         height: "20px",
         border: "1px solid black",
-        display:"inline-block",
+        display: "inline-block",
         marginRight: "3px",
-        backgroundColor:props.on ? "green" : "white",
+        backgroundColor: props.on ? "green" : "white",
         padding: "2px"
 
 
@@ -23,9 +23,9 @@ function OnOff(props:OnOffPropsType) {
         width: "30px",
         height: "20px",
         border: "1px solid black",
-        display:"inline-block",
+        display: "inline-block",
         marginRight: "3px",
-        backgroundColor:props.on ? "white": "red",
+        backgroundColor: props.on ? "white" : "red",
         padding: "2px"
 
 
@@ -35,20 +35,25 @@ function OnOff(props:OnOffPropsType) {
         height: "10px",
         borderRadius: "5px",
         border: "1px solid black",
-        display:"inline-block",
-        backgroundColor:props.on ? "green" : "red",
-
-
+        display: "inline-block",
+        backgroundColor: props.on ? "green" : "red",
     }
 
-    return(
-    <div>
-        <div style={OnButtonStyle} onClick={
-            ()=>{props.onChange(!props.on)}}>On</div>
-        <div style={OffButtonStyle} onClick={
-            ()=>{props.onChange(!props.on)}}>Off</div>
-        <div style={IndicatorStyle} ></div>
-    </div>
-)
+    const onClicked = () => {
+        props.onChange(!props.on)
+    }
+
+    const offClicked = () => {
+        props.onChange(!props.on)
+    }
+
+    return (
+        <div>
+            <div style={OnButtonStyle} onClick={onClicked}>On</div>
+            <div style={OffButtonStyle} onClick={offClicked}>Off</div>
+            <div style={IndicatorStyle}></div>
+        </div>
+    )
 }
+
 export default OnOff;
