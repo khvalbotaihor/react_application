@@ -5,6 +5,7 @@ import UncontrolledAccordion from "./Components/UncontrolledAccordion/Uncontroll
 import {UncontrolledRating} from "./Components/UncontrolledRating/UncontrolledRating";
 import Accordion from "./Components/Accordion/Accordion";
 import {Rating, RatingValueType} from "./Components/Rating/Rating";
+import UncontrolledOnOff from "./Components/UncontrolledOnOff/UncontrolledOnOff";
 
 
 // function declaration
@@ -12,17 +13,24 @@ function App() {
     console.log("App rendering")
 
 let[ratingValue, setRatingValue] = useState<RatingValueType>(3);
-let[collapsed, setCollapsed] = useState<boolean>(false);
+let[collapsed, setCollapsed] = useState<boolean>(true);
+let[on, SetOnOff] = useState<boolean>(false);
+
     return (
         <div className={"App"}>
 
 
             <OnOff />
+            <UncontrolledOnOff on={on} SetOnOff={SetOnOff}/>
             <UncontrolledAccordion titleValue={"Menu"}/>
             <UncontrolledRating />
             //controlled components
             <Rating value={ratingValue} onClick={setRatingValue}/>
-            <Accordion titleValue={"Menushka"} collapsed={collapsed} setCollapsed={setCollapsed}/>
+            <Accordion
+                titleValue={"Menushka"}
+                collapsed={collapsed}
+                onChange = {()=> {setCollapsed(!collapsed)}}
+            />
         </div>
     );
 }
