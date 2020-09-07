@@ -10,6 +10,9 @@ import {Rating} from "./Components/Rating/Rating";
 // function declaration
 function App() {
     console.log("App rendering")
+
+
+
     // вот здесь функция может делать штото полезное
     // в конце функция обязана вернуть какойто результат, возвращают JSX
     return (
@@ -17,9 +20,9 @@ function App() {
 
 
             <OnOff />
-
             <UncontrolledAccordion titleValue={"Menu"}/>
             <UncontrolledRating />
+            //controlled components
             <Rating value={3} />
             <Accordion titleValue={"Menushka"} collapsed={false} />
         </div>
