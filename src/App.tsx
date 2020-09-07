@@ -12,7 +12,7 @@ function App() {
     console.log("App rendering")
 
 let[ratingValue, setRatingValue] = useState<RatingValueType>(3);
-
+let[collapsed, setCollapsed] = useState<boolean>(false);
     return (
         <div className={"App"}>
 
@@ -22,7 +22,7 @@ let[ratingValue, setRatingValue] = useState<RatingValueType>(3);
             <UncontrolledRating />
             //controlled components
             <Rating value={ratingValue} onClick={setRatingValue}/>
-            <Accordion titleValue={"Menushka"} collapsed={false} />
+            <Accordion titleValue={"Menushka"} collapsed={collapsed} setCollapsed={setCollapsed}/>
         </div>
     );
 }
