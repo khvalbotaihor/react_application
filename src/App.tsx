@@ -15,21 +15,27 @@ function App() {
 let[ratingValue, setRatingValue] = useState<RatingValueType>(3);
 let[collapsed, setCollapsed] = useState<boolean>(true);
 let[on, SetOnOff] = useState<boolean>(false);
+let[switchOn, setSwitchOn] = useState<boolean>(false);
+
 
     return (
         <div className={"App"}>
+            <OnOff on={switchOn} onChange={setSwitchOn} />
 
 
-            <OnOff />
-            <UncontrolledOnOff on={on} SetOnOff={SetOnOff}/>
+            <UncontrolledOnOff on={on} SetOnOff={SetOnOff}/>{switchOn.toString()}
+
+
             <UncontrolledAccordion titleValue={"Menu"}/>
             <UncontrolledRating />
             //controlled components
+
+
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <Accordion
                 titleValue={"Menushka"}
                 collapsed={collapsed}
-                onChange={setCollapsed}
+                onChange={()=>{setCollapsed(!collapsed)}}
             />
         </div>
     );

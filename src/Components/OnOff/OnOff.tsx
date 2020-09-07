@@ -1,13 +1,12 @@
 import React, {useState} from "react";
-import {setFlagsFromString} from "v8";
 
 type OnOffPropsType = {
-    //on: boolean
+    on: boolean
+    onChange: (value:boolean) => void
 }
 
-function OnOff(props:OnOffPropsType) {
 
-let[on, SetOnOff] = useState<boolean>(false);
+function OnOff(props:OnOffPropsType) {
 
     const OnButtonStyle ={
         width: "30px",
@@ -15,7 +14,7 @@ let[on, SetOnOff] = useState<boolean>(false);
         border: "1px solid black",
         display:"inline-block",
         marginRight: "3px",
-        backgroundColor:on ? "green" : "white",
+        backgroundColor:props.on ? "green" : "white",
         padding: "2px"
 
 
@@ -26,7 +25,7 @@ let[on, SetOnOff] = useState<boolean>(false);
         border: "1px solid black",
         display:"inline-block",
         marginRight: "3px",
-        backgroundColor:on ? "white": "red",
+        backgroundColor:props.on ? "white": "red",
         padding: "2px"
 
 
@@ -37,15 +36,17 @@ let[on, SetOnOff] = useState<boolean>(false);
         borderRadius: "5px",
         border: "1px solid black",
         display:"inline-block",
-        backgroundColor:on ? "green" : "red",
+        backgroundColor:props.on ? "green" : "red",
 
 
     }
 
     return(
     <div>
-        <div style={OnButtonStyle} onClick={()=>{SetOnOff(false)}}>On</div>
-        <div style={OffButtonStyle} onClick={()=>{SetOnOff(true)}}>Off</div>
+        <div style={OnButtonStyle} onClick={
+            ()=>{props.onChange(!props.on)}}>On</div>
+        <div style={OffButtonStyle} onClick={
+            ()=>{props.onChange(!props.on)}}>Off</div>
         <div style={IndicatorStyle} ></div>
     </div>
 )
