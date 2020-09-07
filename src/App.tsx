@@ -3,6 +3,7 @@ import './App.css';
 import OnOff from "./Components/OnOff/OnOff";
 import UncontrolledAccordion from "./Components/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./Components/UncontrolledRating/UncontrolledRating";
+import Accordion from "./Components/Accordion/Accordion";
 
 
 // function declaration
@@ -11,14 +12,12 @@ function App() {
     // вот здесь функция может делать штото полезное
     // в конце функция обязана вернуть какойто результат, возвращают JSX
     return (
-        <div>
+        <div className={"App"}>
 
 
             <OnOff />
-            <OnOff />
-            <UncontrolledRating />
+
             <UncontrolledAccordion titleValue={"Menu"}/>
-            <UncontrolledAccordion titleValue={"Users"}/>
         </div>
     );
 }
